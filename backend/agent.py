@@ -21,7 +21,7 @@ model = init_chat_model("gpt-4o-mini", model_provider="openai", max_tokens=2000,
 memory = MemorySaver()
 matplotlib.use('Agg')
 
-db = SQLDatabase.from_uri("mysql+mysqlconnector://root:t0220975b@localhost:3306/financial_db")
+db = SQLDatabase.from_uri(os.getenv("DB_URI"))
 query_sql_tool = QuerySQLDatabaseTool(db=db)
 
 repl_tool = Tool(

@@ -1,5 +1,7 @@
 mysql-connector-python
 python-dotenv
+pandas
+matplotlib
 langchain
 langgraph
 langchain-community
