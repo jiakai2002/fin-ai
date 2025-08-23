@@ -212,7 +212,8 @@ def create_system_message():
     return system_message
 
 system_message = None
-config = {"configurable": {"thread_id": "thread-001"}}
+thread_id = uuid.uuid4().hex[:8]
+config = {"configurable": {"thread_id": thread_id}}
 
 async def send_init_prompt(app:FastAPI):
     global graph
